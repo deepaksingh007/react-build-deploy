@@ -11,10 +11,7 @@ phases:
   build:
     commands:
       - echo Running Unit Tests
-      - npm run test
-      - echo Building artifacts
       - npm run build
-      - echo Deploying artifacts
       - npm run deploy
       - echo build and deploy Finished
 

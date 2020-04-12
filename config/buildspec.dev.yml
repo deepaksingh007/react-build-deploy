@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo Installing Web dependencies
+      - npm install --silent
+      - echo Finished installing Web dependencies
+  build:
+    commands:
+      - echo Running Unit Tests
+      - npm run test
+      - echo Building artifacts
+      - npm run build
+      - echo Deploying artifacts
+      - npm run deploy-dev
+      - echo build and deploy Finished
+
+cache:
+  paths:
+    - "node_modules/**/*"
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "build*"
+  discard-paths: no

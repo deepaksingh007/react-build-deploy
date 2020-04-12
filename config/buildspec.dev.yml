@@ -12,9 +12,13 @@ phases:
     commands:
       - echo Running Unit Tests
       - npm run build
-      - npm run deploy
       - echo build and deploy Finished
 
 cache:
   paths:
     - "node_modules/**/*"
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build

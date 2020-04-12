@@ -15,7 +15,7 @@ phases:
       - echo Building artifacts
       - npm run build
       - echo Deploying artifacts
-      - npm run deploy-dev
+      - npm run deploy
       - echo build and deploy Finished
 
 cache:
